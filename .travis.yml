@@ -1,0 +1,13 @@
+language: python
+python:
+- '3.6'
+install:
+- pip install ansible==2.3.0 molecule apache-libcloud
+script:
+- molecule --debug test
+after_script:
+- molecule --debug destroy
+notifications:
+  slack:
+    rooms:
+      secure: KqcRlPjr0fBpyzNw4n3Xc9dT04x/V3hAHV1/bkW4xw2S7UyCX+k97tUFnlT2uOEjy+uxl7EHIu95ELKCwCENXYUWAGRIyG4lroXx90hyCfcR6kRkDWMoEeEdie/UBppOqRwrXNUYGUr4tYiTr6NvqQiGzKk8Z/VLvwkX74mnXXe2arf1kjzw0gfP+yxq6x7dCYdsnWsMbVfwm4mI6NDU9c25yGSr47RDJ6G/mgqBj2pJmiXQcc6TeSdepCvNP2ALl2r17kNn6Dkk8vDJUNPSv2UVbupxSFZ0xaih9cuYPD2A3pSAukVAV4EtZWl1YlN7HvESYY6BgHWANgDfp2YwGStdztKwUawpKPW62SpANomxKAIXQq0g5fhvTEXy8/0jyOsY/PMcDXuFCdqUy7ylB+NHzloV7anww2SffBZegTRPppDhv9jfwDn0gG5GDjuAfpHQ+//Vf/fTecUVhd4ppCgL2TNudLbB5ZgpA674c5P8ljBfbXEkvJsoxjZUtAC0XHx8aG2KJPmlgkaYWopSVC0gYWTmRxLAXJDQTX3sp5cUbAGVdk7Iod0MSJ1uLGVncWqYZNsZ5XfjNHQKXZ/Pzf1CPv5XErtZRPDZWPF0CvNfSYnnNB3zse7r1RSxCFKCHOk+ZdBzX0hmtb4l7NvosCEo38AJPGH9dVdUCX3eRwk=
